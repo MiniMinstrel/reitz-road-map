@@ -17,7 +17,7 @@ Reitz Road Map (RRM) is an application that assists newer students to the UF cam
 
 ## Contributing
 
-Contributors Allowed
+Contributors
 - John Scharff
 - Mike Ciruzzi 
 - Caroline Rogers
