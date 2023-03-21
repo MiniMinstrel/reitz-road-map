@@ -1,5 +1,7 @@
 import React from 'react';
 
+// Renders out the header for both designs. 
+
 const Header = () => {
 	return (
 		<div>

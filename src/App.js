@@ -23,7 +23,7 @@ function App() {
 
 // Conditionals. If the page just loaded (0), then load the title page. If "Design A" div
 // is clicked, run entryAHandler, and display Design A page. If "Design B" div is clicked,
-// run entryBHandler, and display Design B page.
+// run entryBHandler, and display Design B page. Both Header and Navbar components are included.
   if (entryKey == 0) {
     page = 
       <div class="flex flex-col justify-center items-center h-screen bg-blue-500">

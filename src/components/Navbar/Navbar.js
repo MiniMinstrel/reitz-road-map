@@ -1,5 +1,7 @@
 import React from 'react';
 
+// Renders out the navbar, plus all buttons for both designs. 
+
 const Navbar = () => {
 	return (
 		<div>
