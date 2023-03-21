@@ -3,8 +3,10 @@ import './App.css';
 
 function App() {
 
+// Creates a React state that determines what's displayed.
   const [entryKey, setEntryKey] = useState(0);
 
+// Functions that handle the clicks on the button divs.
   const entryAHandler = (event) => {
     setEntryKey(1);
   }
@@ -13,10 +15,12 @@ function App() {
     setEntryKey(2);
   }
 
-  console.log(entryKey);
-
+// Page variable that'll be rendered.
   let page;
 
+// Conditionals. If the page just loaded (0), then load the title page. If "Design A" div
+// is clicked, run entryAHandler, and display Design A page. If "Design B" div is clicked,
+// run entryBHandler, and display Design B page.
   if (entryKey == 0) {
     page = 
       <div class="flex flex-col justify-center items-center h-screen bg-blue-500">
@@ -41,6 +45,7 @@ function App() {
       </div>
   }
 
+//Render contents of page variable. 
   return (
     <div>
     { page }
