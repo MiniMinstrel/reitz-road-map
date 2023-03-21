@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
 
+import Header from './components/Header/Header';
+import Navbar from './components/Navbar/Navbar';
+
 function App() {
 
 // Creates a React state that determines what's displayed.
@@ -34,14 +37,16 @@ function App() {
   } else if (entryKey == 1) {
     page =
       <div>
-        <h1>You're here!</h1>
-        <h3>We're now going to load design A!</h3>
+        <Header />
+        <p>Design A</p>
+        <Navbar />
       </div>;
   } else if (entryKey == 2) {
     page =
       <div>
-        <h1>You're here!</h1>
-        <h3>We're now going to load design B!</h3>
+        <Header />
+        <p>Design B</p>
+        <Navbar />
       </div>
   }
 
