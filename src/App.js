@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
 
+import Header from './components/Header/Header';
+import Navbar from './components/Navbar/Navbar';
+
 function App() {
 
 // Creates a React state that determines what's displayed.
@@ -20,7 +23,7 @@ function App() {
 
 // Conditionals. If the page just loaded (0), then load the title page. If "Design A" div
 // is clicked, run entryAHandler, and display Design A page. If "Design B" div is clicked,
-// run entryBHandler, and display Design B page.
+// run entryBHandler, and display Design B page. Both Header and Navbar components are included.
   if (entryKey == 0) {
     page = 
       <div class="flex flex-col justify-center items-center h-screen bg-blue-500">
@@ -34,14 +37,16 @@ function App() {
   } else if (entryKey == 1) {
     page =
       <div>
-        <h1>You're here!</h1>
-        <h3>We're now going to load design A!</h3>
+        <Header />
+        <p>Design A</p>
+        <Navbar />
       </div>;
   } else if (entryKey == 2) {
     page =
       <div>
-        <h1>You're here!</h1>
-        <h3>We're now going to load design B!</h3>
+        <Header />
+        <p>Design B</p>
+        <Navbar />
       </div>
   }
 
