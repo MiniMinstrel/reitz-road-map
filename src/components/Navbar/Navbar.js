@@ -10,7 +10,7 @@ const Navbar = () => {
   				bg-white rounded-full fixed bottom-4 left-6 hover:bg-orange-200 transition ease-in-out duration-300">
   					<img class="place-self-center h-8 w-8" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Home-icon.svg/2048px-Home-icon.svg.png" alt="Home Icon" />
   				</div>
-  				<div class="grid grid-cols-1 w-36 h-36 border-4 border-orange-400 
+  				<div class="grid grid-cols-1 w-32 h-32 border-4 border-orange-400 
   				bg-white rounded-full fixed bottom-2 hover:bg-orange-200 transition ease-in-out duration-300">
   					<img class="place-self-center h-20 w-20" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/1200px-Magnifying_glass_icon.svg.png" alt="Magnifying Icon" />
   				</div>

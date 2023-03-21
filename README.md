@@ -13,6 +13,8 @@ Reitz Road Map (RRM) is an application that assists newer students to the UF cam
 
 ```
 1. Simply run npm start, and a live version will be printed to your localhost:3000.
+2. If you wish to test on mobile, run ipconfig to receive your IPv4 address, then enter that plus :3000 to test.
+- Example: 10.10.10.10:3000
 ```
 
 ## Contributing
