@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 
+import Map from '../DesignA/Map/Map';
+import ListElement from '../DesignB/List/ListElement';
+import ResturantPage from '../ResturantPage/ResturantPage';
+import Search from '../Search/Search';
+import Settings from '../Settings/Settings';
+
 
 const Content = (props) => {
 
@@ -13,25 +19,33 @@ const Content = (props) => {
 
 	const contentHandler = () => {
 		if (display == 0 && key == 1) {
+
+			//...I'll clean this up in the morning. 
+
 			page = <div>
-				<p>Here, we would put the map!</p>
-				<p onClick={resturantTrigger}>I'm an element in the map!</p>
+				<Map resturantTrigger={resturantTrigger}/>
 			</div>
 		} else if (display == 0 && key == 2) {
 			page = <div>
-				<p onClick={resturantTrigger} >Here, we would put the list!</p>
+				{/* Repeat Element for as many resturants needed. */}
+				<p>This is the list!</p>
+				<ListElement resturantTrigger={resturantTrigger} name="" waitTime="" avgPrice="" menu="" />
+				<ListElement resturantTrigger={resturantTrigger} name="" waitTime="" avgPrice="" menu="" />
+				<ListElement resturantTrigger={resturantTrigger} name="" waitTime="" avgPrice="" menu="" />
 			</div>
 		} else if (display == 1) {
 			page = <div>
-				<p>Here, we would pull up the search menu!</p>
+				<Search />
+				<ListElement resturantTrigger={resturantTrigger} name="" waitTime="" avgPrice="" menu="" />
+				<ListElement resturantTrigger={resturantTrigger} name="" waitTime="" avgPrice="" menu="" />
 			</div>
 		} else if (display == 2) {
 			page = <div>
-				<p>Here, we would pull up the settings!</p>
+				<Settings />
 			</div>
 		} else if (display == 3) {
 			page = <div>
-				<p>Here, we would pull up the resturant!</p>
+				<ResturantPage />
 			</div>
 		}
 	}
