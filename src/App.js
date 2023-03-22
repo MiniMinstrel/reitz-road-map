@@ -3,11 +3,13 @@ import './App.css';
 
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
+import Content from './components/Content/Content';
 
 function App() {
 
 // Creates a React state that determines what's displayed.
   const [entryKey, setEntryKey] = useState(0);
+  const [contentKey, setContentKey] = useState(0);
 
 // Functions that handle the clicks on the button divs.
   const entryAHandler = (event) => {
@@ -18,12 +20,19 @@ function App() {
     setEntryKey(2);
   }
 
+// Function that handles changes to the content from the NavBar.
+
+  const changeKey = (value) => {
+    setContentKey(value);
+  }
+
 // Page variable that'll be rendered.
   let page;
 
 // Conditionals. If the page just loaded (0), then load the title page. If "Design A" div
 // is clicked, run entryAHandler, and display Design A page. If "Design B" div is clicked,
 // run entryBHandler, and display Design B page. Both Header and Navbar components are included.
+
   if (entryKey == 0) {
     page = 
       <div class="flex flex-col justify-center items-center h-screen bg-blue-500">
@@ -38,15 +47,15 @@ function App() {
     page =
       <div>
         <Header />
-        <p>Design A</p>
-        <Navbar />
+        <Content entryKey={entryKey} currentDisplay={contentKey} changeKey={changeKey} />
+        <Navbar changeKey={changeKey} />
       </div>;
   } else if (entryKey == 2) {
     page =
       <div>
         <Header />
-        <p>Design B</p>
-        <Navbar />
+        <Content entryKey={entryKey} currentDisplay={contentKey} changeKey={changeKey}/>
+        <Navbar changeKey={changeKey} />
       </div>
   }
 
