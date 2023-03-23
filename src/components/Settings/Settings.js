@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import moon from '../DesignA/Images/moon.png';
+
 const Settings = (props) => {
 
 	// This is the settings page, which should just have
@@ -9,8 +11,10 @@ const Settings = (props) => {
 	// handle unless you'd like to, oh dear reader.
 
 	return(
-		<div>
-			<p>Settings!</p>
+		<div class="settings">
+			<h1>Settings</h1>
+			<p> <img src={moon} alt="Moon" /> Dark Mode</p>
+			<p>Font Size</p>
 		</div>
 		)
 }

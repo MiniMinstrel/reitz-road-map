@@ -6,6 +6,12 @@ import ResturantPage from '../ResturantPage/ResturantPage';
 import Search from '../Search/Search';
 import Settings from '../Settings/Settings';
 
+//logos
+import panda from '../DesignA/Images/panda.png';
+import starbucks from '../DesignA/Images/starbucks.png'; 
+import mi_apa from '../DesignA/Images/mi_apa.png'; 
+import pollo from '../DesignA/Images/pollo.png'; 
+
 
 const Content = (props) => {
 
@@ -45,10 +51,21 @@ const Content = (props) => {
 
 			page = <div>
 				{/* Repeat Element for as many resturants needed. */}
-				<p>This is the list!</p>
-				<ListElement resturantTrigger={resturantTrigger} name="" waitTime="" avgPrice="" menu="" logo="" />
-				<ListElement resturantTrigger={resturantTrigger} name="" waitTime="" avgPrice="" menu="" logo="" />
-				<ListElement resturantTrigger={resturantTrigger} name="" waitTime="" avgPrice="" menu="" logo="" />
+				<div class= "design-b-list">
+					<p>This is the list!</p>
+						<div class= "list-panda">
+							<img src={panda} alt="Panda Express" />
+							<ListElement resturantTrigger={resturantTrigger} name="Panda Express" waitTime="15 min" avgPrice="$10" menu="menu" logo="" />
+						</div>
+						<div class= "list-starbucks">
+							<img src={starbucks} alt="Starbucks"/>
+							<ListElement resturantTrigger={resturantTrigger} name="Starbucks" waitTime="5 min" avgPrice="$5" menu="menu" logo= "" />
+						</div>
+						<div class= "list-pollo">
+							<img src={pollo} alt="Pollo Tropical"/>
+							<ListElement resturantTrigger={resturantTrigger} name="Pollo Tropical" waitTime="15 min" avgPrice="$10" menu="menu" logo= "" />
+						</div>
+					</div>
 			</div>
 		} else if (display == 1) {
 
