@@ -6,9 +6,10 @@ const ListElement = (props) => {
 	// To access the values you passed down previously, use props.(attribute),
 	// as seen in props.resturantTrigger. 
 
+	//name="Panda Express" waitTime="15 min" avgPrice="$10" menu="menu" logo=""
 	return(
 		<div onClick={props.resturantTrigger}>
-			<p>I'm one of the many resturants you can pick!</p>
+			<p>{props.name} {props.waitTime} {props.avgPrice} </p>
 		</div>
 		)
 }
