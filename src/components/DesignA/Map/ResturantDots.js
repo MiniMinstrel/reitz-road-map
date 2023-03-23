@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ResturantDots = ({ trigger2 }) => {
+const ResturantDots = (props) => {
 
 	// This is the basic HTML/TailwindCSS that goes into each
 	// pin of Design A. The onClick={trigger2} property will
@@ -11,7 +11,7 @@ const ResturantDots = ({ trigger2 }) => {
 	// the logic per resturant.  
 
 	return(
-		<div onClick={trigger2}>
+		<div onClick={props.resturantTrigger}>
 			<p >I'm a dot on said map!</p>
 		</div>
 		)
