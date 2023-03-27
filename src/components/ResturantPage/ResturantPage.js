@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import panda_food from '../DesignA/Images/panda.jpg';
 
 const ResturantPage = (props) => {
 
@@ -8,12 +7,12 @@ const ResturantPage = (props) => {
 	// for specific resturants, I can handle that (unless you wanna give it a shot).
 
 	return(
-		<div class="restaurant">
-			<h1>Panda Express</h1>
-			<img src={panda_food} alt="Panda Express" />
-			<p>Wait Time: 15 min</p>
-			<p>Average Price: $10</p>
-			<p>Menu: link </p>
+		<div className ="restaurant">
+			<h1> {props.name} </h1>
+			{props.food}
+			<p> {props.wait} </p>
+			<p> {props.price} </p>
+			<p> {props.menu} </p>
 		</div>
 		)
 }

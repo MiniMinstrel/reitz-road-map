@@ -1,32 +1,36 @@
-.map {
-    background-color: white;
+.App {
+    background-color: lightgrey;
 }
 
-.panda {
+.map {
+    background-color: lightgrey;
+}
+
+.map > .panda {
     max-width: 15%;
     height: auto;
     margin: auto;
 }
 
-.starbucks {
+.map > .starbucks {
     max-width: 17%;
     height: auto;
     margin: auto;
 }
 
-.pollo {
+.map > .pollo {
     max-width: 18%;
     height: auto;
     margin: auto;
 }
 
-.mi-apa {
+.map > .mi-apa {
     max-width: 20%;
     height: auto;
     margin: auto;
 }
 
-.list-panda, .list-starbucks, .list-pollo {
+.list {
     display: inline-flex;
     padding: 15px 10px 0px 0px;
     background: lightgray;
@@ -34,19 +38,13 @@
     font-size: 20px;
 }
 
-.list-panda > img {
+.list > .icon-image {
     max-width: 10%;
     margin: -8px 20px 5px 5px;
 }
 
-.list-starbucks > img {
-    max-width: 10%;
-    margin: -8px 20px 5px 5px;
-}
-
-.list-pollo > img {
-    max-width: 10%;
-    margin: -8px 20px 5px 5px;
+.settings {
+    background-color: lightgrey;
 }
 
 .settings > h1 {
@@ -87,6 +85,7 @@
 }
 
 .search {
+    background-color: lightgrey;
     margin: auto;
     text-align: center;
 }

@@ -12,7 +12,7 @@ const Map = (props) => {
 	return(
 		<div>
 			<p>Map!</p>
-			<ResturantDots resturantTrigger={props.resturantTrigger} />
+			<ResturantDots restaurantTrigger={props.restaurantTrigger} />
 		</div>
 		)
 }

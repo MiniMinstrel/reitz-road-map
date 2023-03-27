@@ -17,23 +17,23 @@ const ResturantDots = (props) => {
 
 	return(
 		<div class="map">
-			<div class="panda">
-				<div onClick={props.resturantTrigger}>
+			<div className ="panda">
+				<div onClick={props.restaurantTrigger}>
 					<img src={panda} alt="Panda Express" />
 				</div>
 			</div>
-			<div class="starbucks">
-				<div onClick={props.resturantTrigger}>
+			<div className ="starbucks">
+				<div onClick={props.restaurantTrigger}>
 					<img src={starbucks} alt="Starbucks" />
 				</div>
 			</div>
-			<div class="pollo">
-				<div onClick={props.resturantTrigger}>
+			<div className ="pollo">
+				<div onClick={props.restaurantTrigger}>
 					<img src={pollo} alt="Pollo Tropical" />
 				</div>
 			</div>
-			<div class="mi-apa">
-				<div onClick={props.resturantTrigger}>
+			<div className ="mi-apa">
+				<div onClick={props.restaurantTrigger}>
 					<img src={mi_apa} alt="Mi Apa" />
 				</div>
 			</div>
