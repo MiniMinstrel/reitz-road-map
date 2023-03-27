@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Draggable from 'react-draggable';
 
 import ResturantDots from './ResturantDots';
 
@@ -10,10 +11,14 @@ const Map = (props) => {
 	// added.
 
 	return(
-		<div>
-			<p>Map!</p>
-			<ResturantDots resturantTrigger={props.resturantTrigger} />
-		</div>
+		<div class="w-full h-full relative">
+      		<div class="absolute inset-0 overflow-x-hidden" style={{ width: "250vw", height: "250vh" }}>
+        		<Draggable defaultPosition={{x: -250, y: -150}}>
+          			<img class="object-none h-full w-full" src="https://i.imgur.com/4DzPmDM.png" alt="" />
+        		</Draggable>
+      		</div>
+        		<ResturantDots resturantTrigger={props.resturantTrigger} />
+    	</div>
 		)
 }
 

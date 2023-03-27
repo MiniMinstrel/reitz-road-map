@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Draggable from 'react-draggable';
 import panda from '../Images/panda.png';
 import starbucks from '../Images/starbucks.png'; 
 import mi_apa from '../Images/mi_apa.png'; 
@@ -17,26 +18,29 @@ const ResturantDots = (props) => {
 
 	return(
 		<div class="map">
-			<div class="panda">
-				<div onClick={props.resturantTrigger}>
-					<img src={panda} alt="Panda Express" />
+			
+				<div class="panda">
+					<Draggable>
+						<div onClick={props.resturantTrigger}>
+							<img src={panda} alt="Panda Express" />
+						</div>
+					</Draggable>
 				</div>
-			</div>
-			<div class="starbucks">
-				<div onClick={props.resturantTrigger}>
-					<img src={starbucks} alt="Starbucks" />
+			<Draggable>
+				<div class="starbucks">
+					<img onClick={props.resturantTrigger} class="w-1/6 h-1/6" src={starbucks} alt="Starbucks" />
 				</div>
-			</div>
-			<div class="pollo">
-				<div onClick={props.resturantTrigger}>
-					<img src={pollo} alt="Pollo Tropical" />
+			</Draggable>
+			<Draggable>
+				<div class="pollo">
+					<img onClick={props.resturantTrigger} class="w-1/6 h-1/6" src={pollo} alt="Pollo Tropical" />
 				</div>
-			</div>
-			<div class="mi-apa">
-				<div onClick={props.resturantTrigger}>
-					<img src={mi_apa} alt="Mi Apa" />
+			</Draggable>
+			<Draggable>
+				<div class="mi-apa">
+					<img onClick={props.resturantTrigger} class="w-1/6 h-1/6" src={mi_apa} alt="Mi Apa" />
 				</div>
-			</div>
+			</Draggable>
 		</div>
 		)
 }
