@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 
-function Search() {
+function Search(items) {
 	const [restaurant, setRestaurant] = useState("");
-  
+
+
+
 	return (
 		<div class="search">
 			<h1>Search</h1>

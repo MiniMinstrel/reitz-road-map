@@ -2,6 +2,12 @@
     background-color: white;
 }
 
+.burg {
+    max-width: 15%;
+    height: auto;
+    margin: auto;
+}
+
 .panda {
     max-width: 15%;
     height: auto;
@@ -26,12 +32,17 @@
     margin: auto;
 }
 
-.list-panda, .list-starbucks, .list-pollo {
+.list-panda, .list-starbucks, .list-pollo, .list-burg {
     display: inline-flex;
     padding: 15px 10px 0px 0px;
     background: lightgray;
     border: 2px solid black;
     font-size: 20px;
+}
+
+.list-burg > img {
+    max-width: 10%;
+    margin: -8px 20px 5px 5px;
 }
 
 .list-panda > img {

@@ -3,6 +3,7 @@ import panda from '../Images/panda.png';
 import starbucks from '../Images/starbucks.png'; 
 import mi_apa from '../Images/mi_apa.png'; 
 import pollo from '../Images/pollo.png'; 
+import burg from '../Images/burg.png'
 
 
 const ResturantDots = ({ trigger2 }) => {
@@ -35,6 +36,11 @@ const ResturantDots = ({ trigger2 }) => {
 			<div class="mi-apa">
 				<div onClick={trigger2}>
 					<img src={mi_apa} alt="Mi Apa" />
+				</div>
+			</div>
+			<div class="burg">
+				<div onClick={trigger2}>
+					<img src={burg} alt="Burger 352" />
 				</div>
 			</div>
 		</div>

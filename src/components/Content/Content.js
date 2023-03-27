@@ -11,6 +11,7 @@ import panda from '../DesignA/Images/panda.png';
 import starbucks from '../DesignA/Images/starbucks.png'; 
 import mi_apa from '../DesignA/Images/mi_apa.png'; 
 import pollo from '../DesignA/Images/pollo.png'; 
+import burg from '../DesignA/Images/burg.png'
 
 
 const Content = (props) => {
@@ -64,6 +65,10 @@ const Content = (props) => {
 						<div class= "list-pollo">
 							<img src={pollo} alt="Pollo Tropical"/>
 							<ListElement resturantTrigger={resturantTrigger} name="Pollo Tropical" waitTime="15 min" avgPrice="$10" menu="menu" logo= "" />
+						</div>
+						<div class= "list-burg">
+							<img src={burg} alt="Burger 352"/>
+							<ListElement resturantTrigger={resturantTrigger} name="Burger 352" waitTime="10 min" avgPrice="$5" menu="menu" logo= "" />
 						</div>
 					</div>
 			</div>
