@@ -46,14 +46,16 @@ function App() {
           <div onClick={entryBHandler} class="bg-white text-blue-500 hover:bg-orange-400 hover:text-white transition ease-in-out duration-300 px-4 py-2 rounded-lg shadow-md">Design B</div>
         </div>
       </div>
-  } else if (entryKey == 1) {
+  }
+  else if (entryKey == 1) {
     page =
       <div>
         <Header />
         <Content entryKey={entryKey} currentDisplay={contentKey} changeKey={changeKey} />
         <Navbar changeKey={changeKey} />
       </div>;
-  } else if (entryKey == 2) {
+  }
+  else if (entryKey == 2) {
     page =
       <div>
         <Header />

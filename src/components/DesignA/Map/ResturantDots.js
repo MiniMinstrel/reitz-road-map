@@ -6,7 +6,7 @@ import pollo from '../Images/pollo.png';
 import burg from '../Images/burg.png'
 
 
-const ResturantDots = ({ trigger2 }) => {
+const ResturantDots = (props) => {
 
 	// This is the basic HTML/TailwindCSS that goes into each
 	// pin of Design A. The onClick={trigger2} property will
@@ -18,23 +18,23 @@ const ResturantDots = ({ trigger2 }) => {
 
 	return(
 		<div class="map">
-			<div class="panda">
-				<div onClick={trigger2}>
+			<div className ="panda">
+				<div onClick={props.restaurantTrigger}>
 					<img src={panda} alt="Panda Express" />
 				</div>
 			</div>
-			<div class="starbucks">
-				<div onClick={trigger2}>
+			<div className ="starbucks">
+				<div onClick={props.restaurantTrigger}>
 					<img src={starbucks} alt="Starbucks" />
 				</div>
 			</div>
-			<div class="pollo">
-				<div onClick={trigger2}>
+			<div className ="pollo">
+				<div onClick={props.restaurantTrigger}>
 					<img src={pollo} alt="Pollo Tropical" />
 				</div>
 			</div>
-			<div class="mi-apa">
-				<div onClick={trigger2}>
+			<div className ="mi-apa">
+				<div onClick={props.restaurantTrigger}>
 					<img src={mi_apa} alt="Mi Apa" />
 				</div>
 			</div>

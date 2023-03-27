@@ -2,14 +2,7 @@ import React, { useState } from 'react';
 
 import ResturantDots from './ResturantDots';
 
-const Map = ({ resturantTrigger }) => {
-
-	// Reintepretation of resturantTrigger from Content.js, so
-	// that it can get properly passed down to ResturantDots.
-
-	const trigger2 = () => {
-		resturantTrigger();
-	}
+const Map = (props) => {
 
 	// This should render out an img of a mocked-up map of the Reitz Union,
 	// and the dots are placed across the icon. The map should be able to be dragged,
@@ -19,7 +12,7 @@ const Map = ({ resturantTrigger }) => {
 	return(
 		<div>
 			<p>Map!</p>
-			<ResturantDots trigger2={trigger2} />
+			<ResturantDots restaurantTrigger={props.restaurantTrigger} />
 		</div>
 		)
 }
