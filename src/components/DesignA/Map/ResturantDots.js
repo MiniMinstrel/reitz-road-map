@@ -14,7 +14,7 @@ const ResturantDots = (props) => {
 	// the logic per resturant.  
 
 	return(
-		<Draggable onStart={props.resturantTrigger}>
+		<Draggable defaultPosition={props.start} position={props.pos} onStart={props.resturantTrigger}>
 			<div className={`class ${props.givenClass}`}>
 				<img src={props.name} alt="Panda Express" />
 			</div>
