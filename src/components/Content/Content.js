@@ -86,7 +86,7 @@ const Content = (props) => {
 			// This renders the search bar, and the results of the search bar.
 			// It should be contained all within the Search component. I'll fix that.
 
-			page = <div>
+			page = <div class="pt-14">
 				<Search searchTrigger={searchTrigger}/>
 			</div>
 		}
@@ -95,7 +95,7 @@ const Content = (props) => {
 			// This renders the Settings page. This is a good starting place,
 			// if you're looking to work on something.
 
-			page = <div>
+			page = <div class="pt-14">
 				<Settings />
 			</div>
 		}
@@ -105,7 +105,7 @@ const Content = (props) => {
 			// behind setting a specific resturant, I can handle that. Just the
 			// basic HTML/TailwindCSS layout would be great.
 			if (restaurantName === "Panda Express") {
-				page = <div>
+				page = <div class="pt-14">
 					<div class = "panda-page">
 						<ResturantPage name = "Panda Express" food = <img src={panda_food} alt="Panda Express" /> wait = "Wait Time: 15 min" price = "Average Price: $10" menu = "Menu: link" />
 					</div>
@@ -113,7 +113,7 @@ const Content = (props) => {
 			}
 
 			else if (restaurantName === "Pollo Tropical") {
-				page = <div>
+				page = <div class="pt-14">
 					<div class = "pollo-page">
 						<ResturantPage name = "Pollo Tropical" food = <img src={pollo_food} alt="Pollo Tropical" /> wait = "Wait Time: 15 min" price = "Average Price: $10" menu = "Menu: link" />
 					</div>
@@ -121,7 +121,7 @@ const Content = (props) => {
 			}
 
 			else if (restaurantName === "Starbucks") {
-				page = <div>
+				page = <div class="pt-14">
 					<div class = "starbucks-page">
 						<ResturantPage name = "Starbucks" food = <img src={starbs_food} alt="Starbucks" /> wait = "Wait Time: 5 min" price = "Average Price: $5" menu = "Menu: link" />
 					</div>
@@ -129,7 +129,7 @@ const Content = (props) => {
 			}
 
 			else if (restaurantName === "Mi Apa") {
-				page = <div>
+				page = <div class="pt-14">
 					<div class = "mi-apa-page">
 						<ResturantPage name = "Mi Apa" food = <img src={mi_apa_food} alt="Mi Apa" /> wait = "Wait Time: 10 min" price = "Average Price: $7" menu = "Menu: link" />
 					</div>
