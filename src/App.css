@@ -1,37 +1,33 @@
-.panda {
-    max-width: 17%;
+.App {
+    background-color: lightgrey;
+}
+
+.map {
+    background-color: lightgrey;
+}
+
+.map > .panda {
+    max-width: 15%;
     height: auto;
     margin: auto;
-    background-color: white;
-    border-radius: 9999px;
-    border-width: 8px;
 }
 
 .map > .starbucks {
     max-width: 17%;
     height: auto;
     margin: auto;
-    background-color: white;
-    border-radius: 9999px;
-    border-width: 8px;
 }
 
 .map > .pollo {
     max-width: 18%;
     height: auto;
     margin: auto;
-    background-color: white;
-    border-radius: 9999px;
-    border-width: 8px;
 }
 
 .map > .mi-apa {
     max-width: 20%;
     height: auto;
     margin: auto;
-    background-color: white;
-    border-radius: 9999px;
-    border-width: 8px;
 }
 
 .list {
