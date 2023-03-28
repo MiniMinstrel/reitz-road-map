@@ -12,7 +12,7 @@ const ResturantPage = (props) => {
 			{props.food}
 			<p> {props.wait} </p>
 			<p> {props.price} </p>
-			<p> {props.menu} </p>
+			<p>Menu: <a href={props.menu} class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Link</a></p>
 		</div>
 		)
 }

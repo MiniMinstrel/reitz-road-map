@@ -15,15 +15,15 @@ const Map = (props) => {
 	// Set default offsets here!
 
 	const [pandaPos, setPandaPos] = useState({ x: -170, y: 100 });
-	const [starPos, setStarPos] = useState({ x: -300, y: 130 });
-	const [miPos, setMiPos] = useState({ x: -80, y: 120 });
-	const [polloPos, setPolloPos] = useState({ x: -300, y: 0 });
+	const [starPos, setStarPos] = useState({ x: -300, y: 90 });
+	const [miPos, setMiPos] = useState({ x: -160, y: 20 });
+	const [polloPos, setPolloPos] = useState({ x: -300, y: 200 });
 
   	const handleDrag = (e, ui) => {
     	setPandaPos({ x: ui.x + 230, y: ui.y + 450});
-		setStarPos({x: ui.x + 80, y: ui.y + 420});
-		setMiPos({x: ui.x + 320, y: ui.y + 470});
-		setPolloPos({x: ui.x , y: ui.y + 310});
+		setStarPos({x: ui.x + 80, y: ui.y + 380});
+		setMiPos({x: ui.x + 240, y: ui.y + 370});
+		setPolloPos({x: ui.x , y: ui.y + 170});
   	};
 
 	return(
