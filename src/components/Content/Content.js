@@ -11,7 +11,6 @@ import panda from '../DesignA/Images/panda.png';
 import starbucks from '../DesignA/Images/starbucks.png'; 
 import mi_apa from '../DesignA/Images/mi_apa.png'; 
 import pollo from '../DesignA/Images/pollo.png'; 
-import burg from '../DesignA/Images/burg.png'
 
 //restaurant page images
 import panda_food from '../DesignA/Images/panda.jpg';
@@ -54,7 +53,6 @@ const Content = (props) => {
 			page = <div>
 				{/* Repeat Element for as many resturants needed. */}
 				<div class= "design-b-list">
-					<p>This is the list!</p>
 						<div class= "list-panda">
 							<ListElement restaurantTrigger={restaurantTrigger} name="Panda Express"  icon = <img src={panda} alt="Panda Express" /> waitTime="15 min" avgPrice="$10" menu="menu" logo="" />
 						</div>
@@ -67,10 +65,6 @@ const Content = (props) => {
 						<div class= "list-mi-apa">
 							<ListElement restaurantTrigger={restaurantTrigger} name="Mi Apa" icon = <img src={mi_apa} alt="Mi Apa"/> waitTime="10 min" avgPrice="$7" menu="menu" logo= "" />
 						</div>
-						<div class= "list-burg">
-							<img src={burg} alt="Burger 352"/>
-							<ListElement resturantTrigger={resturantTrigger} name="Burger 352" waitTime="10 min" avgPrice="$5" menu="menu" logo= "" />
-						</div>
 					</div>
 			</div>
 		}
@@ -81,8 +75,6 @@ const Content = (props) => {
 
 			page = <div>
 				<Search />
-				<ListElement restaurantTrigger={restaurantTrigger} name="" waitTime="" avgPrice="" menu="" />
-				<ListElement restaurantTrigger={restaurantTrigger} name="" waitTime="" avgPrice="" menu="" />
 			</div>
 		}
 		else if (display == 2) {
