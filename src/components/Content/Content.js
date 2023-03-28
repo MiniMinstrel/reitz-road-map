@@ -35,6 +35,12 @@ const Content = (props) => {
 		props.changeKey(3);
 	}
 
+	const searchRestaurantTrigger = (restaurantName) => {
+		console.log(restaurantName);
+		setRestaurantName(restaurantName);
+		props.changeKey(3);
+	  }
+
 	// This is ran once, and will decide what content is displayed to page. 
 
 	const contentHandler = () => {
@@ -76,7 +82,7 @@ const Content = (props) => {
 			// It should be contained all within the Search component. I'll fix that.
 
 			page = <div>
-				<Search />
+				<Search searchRestaurantTrigger={searchRestaurantTrigger} />
 			</div>
 		}
 		else if (display == 2) {

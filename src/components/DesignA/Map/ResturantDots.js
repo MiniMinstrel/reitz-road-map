@@ -18,12 +18,15 @@ const ResturantDots = (props) => {
 	// the logic per resturant.  
 
 	return(
-		<div onClick={props.restaurantTrigger} onTouchEnd={props.restaurantTrigger}>
-			<Draggable defaultPosition={props.start} position={props.pos} allowAnyClick={true} >
-				<div className={`class ${props.givenClass}`} >
-					<img src={props.name} alt={props.altText} />
-				</div>
-			</Draggable>
+		<div className ="pin">
+			<div onClick={props.restaurantTrigger} onTouchEnd={props.restaurantTrigger}>
+				<Draggable defaultPosition={props.start} position={props.pos} allowAnyClick={true} >
+					<div className={`class ${props.givenClass}`} >
+						<p> {props.bubble} </p> 
+						<img src={props.name} alt={props.altText} />
+					</div>
+				</Draggable>
+			</div>
 		</div>
 		)
 }
