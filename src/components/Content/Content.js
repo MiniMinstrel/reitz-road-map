@@ -30,8 +30,19 @@ const Content = (props) => {
 	const [restaurantName, setRestaurantName] = useState("");
 
 	const restaurantTrigger = (event) => {
-		console.log(event)
 		setRestaurantName(event.target.alt);
+		props.changeKey(3);
+	}
+
+	const searchTrigger = (event) => {
+		console.log(event)
+		const query = event.toLowerCase();
+		const restaurants = ['Mi Apa', 'Panda Express', 'Pollo Tropical', 'Starbucks'];
+		restaurants.forEach((value) => {
+			if (value.toLowerCase().includes(query)) {
+				setRestaurantName(value);
+			}
+		});
 		props.changeKey(3);
 	}
 
@@ -76,7 +87,7 @@ const Content = (props) => {
 			// It should be contained all within the Search component. I'll fix that.
 
 			page = <div>
-				<Search />
+				<Search searchTrigger={searchTrigger}/>
 			</div>
 		}
 		else if (display == 2) {

@@ -24,6 +24,7 @@ const ResturantDots = (props) => {
 					<img src={props.name} alt={props.altText} />
 				</div>
 			</Draggable>
+			
 		</div>
 		)
 }

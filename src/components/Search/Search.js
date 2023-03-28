@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 
-function Search() {
+function Search(props) {
 	const [restaurant, setRestaurant] = useState("");
+
+	const submitHandler = (event) => {
+		console.log(restaurant);
+
+		event.preventDefault();
+
+		props.searchTrigger(restaurant);
+	}
   
 	return (
 		<div class="search">
 			<h1>Search</h1>
-			<form>
+			<form onSubmit={submitHandler}>
 				<label>Search:
 					<input
 						type="text" 
