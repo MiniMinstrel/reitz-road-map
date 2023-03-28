@@ -30,6 +30,7 @@ const Content = (props) => {
 	const [restaurantName, setRestaurantName] = useState("");
 
 	const restaurantTrigger = (event) => {
+		console.log(event)
 		setRestaurantName(event.target.alt);
 		props.changeKey(3);
 	}
@@ -76,8 +77,6 @@ const Content = (props) => {
 
 			page = <div>
 				<Search />
-				<ListElement restaurantTrigger={restaurantTrigger} name="" waitTime="" avgPrice="" menu="" />
-				<ListElement restaurantTrigger={restaurantTrigger} name="" waitTime="" avgPrice="" menu="" />
 			</div>
 		}
 		else if (display == 2) {

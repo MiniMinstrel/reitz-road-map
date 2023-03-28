@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import Draggable from 'react-draggable';
 
+import panda from '../Images/panda.png';
+import starbucks from '../Images/starbucks.png'; 
+import mi_apa from '../Images/mi_apa.png'; 
+import pollo from '../Images/pollo.png'; 
 
 
 const ResturantDots = (props) => {
@@ -14,11 +18,13 @@ const ResturantDots = (props) => {
 	// the logic per resturant.  
 
 	return(
-		<Draggable defaultPosition={props.start} position={props.pos} onStart={props.resturantTrigger}>
-			<div className={`class ${props.givenClass}`}>
-				<img src={props.name} alt="Panda Express" />
-			</div>
-		</Draggable>
+		<div onClick={props.restaurantTrigger} onTouchEnd={props.restaurantTrigger}>
+			<Draggable defaultPosition={props.start} position={props.pos} allowAnyClick={true} >
+				<div className={`class ${props.givenClass}`} >
+					<img src={props.name} alt={props.altText} />
+				</div>
+			</Draggable>
+		</div>
 		)
 }
 
