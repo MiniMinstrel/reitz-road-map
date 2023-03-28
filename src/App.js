@@ -50,7 +50,7 @@ function App() {
     page =
       <div>
         <Header />
-        <Content entryKey={entryKey} currentDisplay={contentKey} changeKey={changeKey} searchRestaurantTrigger={searchRestaurantTrigger} />
+        <Content entryKey={entryKey} currentDisplay={contentKey} changeKey={changeKey} />
         <Navbar changeKey={changeKey} />
       </div>;
   }
@@ -58,7 +58,7 @@ function App() {
     page =
       <div>
         <Header />
-        <Content entryKey={entryKey} currentDisplay={contentKey} changeKey={changeKey} searchRestaurantTrigger={searchRestaurantTrigger} />
+        <Content entryKey={entryKey} currentDisplay={contentKey} changeKey={changeKey} />
         <Navbar changeKey={changeKey} />
       </div>
   }
