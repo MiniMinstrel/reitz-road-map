@@ -15,11 +15,16 @@ const ResturantDots = (props) => {
 	// within the div will react to a click. 
 
 	// You can use dummy icons/resturant names, I can implement
-	// the logic per resturant.  
+	// the logic per resturant.
+
+	const modified = {
+		x: props.pos.x + 130,
+		y: props.pos.y
+	}  
 
 	return(
 		<div className ="pin">
-			<div onClick={props.restaurantTrigger} onTouchEnd={props.restaurantTrigger}>
+			<div onClick={() => props.restaurantTrigger(props.altText)} onTouchEnd={() => props.restaurantTrigger(props.altText)}>
 				<Draggable defaultPosition={props.start} position={props.pos} allowAnyClick={true} >
 					<div className={`class ${props.givenClass}`} >
 						<p> {props.bubble} </p> 
