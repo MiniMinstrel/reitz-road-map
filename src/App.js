@@ -58,7 +58,7 @@ function App() {
     page =
       <div>
         <Header />
-        <Content entryKey={entryKey} currentDisplay={contentKey} changeKey={changeKey}/>
+        <Content entryKey={entryKey} currentDisplay={contentKey} changeKey={changeKey} />
         <Navbar changeKey={changeKey} />
       </div>
   }

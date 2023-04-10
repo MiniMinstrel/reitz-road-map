@@ -47,6 +47,12 @@ const Content = (props) => {
 		props.changeKey(3);
 	}
 
+	const searchRestaurantTrigger = (restaurantName) => {
+		console.log(restaurantName);
+		setRestaurantName(restaurantName);
+		props.changeKey(3);
+	  }
+
 	// This is ran once, and will decide what content is displayed to page. 
 
 	const contentHandler = () => {
