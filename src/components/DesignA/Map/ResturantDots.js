@@ -23,26 +23,15 @@ const ResturantDots = (props) => {
 	}  
 
 	return(
-		<div onStart={() => false} onClick={() => props.restaurantTrigger(props.altText)} onTouchEnd={() => props.restaurantTrigger(props.altText)} class="grid-cols-1">
-			<Draggable defaultPosition={props.start} position={props.pos} allowAnyClick={true} >
-				<div className={`class ${props.givenClass}`} >
-					<img src={props.name} alt={props.altText} />
-				</div>
-			</Draggable>
-			<Draggable alt={props.altText} onStart={() => false} defaultPosition={props.start} position={modified} allowAnyClick={true} >
-				<div class="justify-center">
-					<div class="flex justify-center items-center bg-gray-100 rounded-full h-8 w-32 px-2">
-					  <div class="flex-1 items-center justify-center h-full border-r border-gray-300 ">
-					  	{props.avgPrice}
-					  </div>
-					  <div class="w-2 h-full bg-gray-300"></div>
-					  <div class="flex-1 h-full border-l border-gray-300">
-					  	<p>{props.waitTime}</p>
-					  </div>
+		<div className ="pin">
+			<div onClick={() => props.restaurantTrigger(props.altText)} onTouchEnd={() => props.restaurantTrigger(props.altText)}>
+				<Draggable defaultPosition={props.start} position={props.pos} allowAnyClick={true} >
+					<div className={`class ${props.givenClass}`} >
+						<p> {props.bubble} </p> 
+						<img src={props.name} alt={props.altText} />
 					</div>
-				</div>
-			</Draggable>
-			
+				</Draggable>
+			</div>
 		</div>
 		)
 }

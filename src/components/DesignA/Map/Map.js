@@ -33,10 +33,10 @@ const Map = (props) => {
           			<img class="object-none h-full w-full" src="https://i.imgur.com/4DzPmDM.png" alt="" />
         		</Draggable>
       		</div>
-        		<ResturantDots pos={pandaPos} name={panda} givenClass={"panda"} restaurantTrigger={props.restaurantTrigger} altText={"Panda Express"} waitTime="15 min" avgPrice="$10" />
-        		<ResturantDots pos={starPos} name={starbucks} givenClass={"starbucks"} restaurantTrigger={props.restaurantTrigger} altText={"Starbucks"} waitTime="5 min" avgPrice="$5"/>
-        		<ResturantDots pos={miPos} name={mi_apa} givenClass={"mi-apa"} restaurantTrigger={props.restaurantTrigger} altText={"Mi Apa"} waitTime="15 min" avgPrice="$10"/>
-        		<ResturantDots pos={polloPos} name={pollo} givenClass={"pollo"} restaurantTrigger={props.restaurantTrigger} altText={"Pollo Tropical"} waitTime="10 min" avgPrice="$7"/>
+        		<ResturantDots pos={pandaPos} name={panda} givenClass={"panda"} bubble = "15|$10" restaurantTrigger={props.restaurantTrigger} altText={"Panda Express"} />
+        		<ResturantDots pos={starPos} name={starbucks} givenClass={"starbucks"} bubble = "5|$5" restaurantTrigger={props.restaurantTrigger} altText={"Starbucks"}/>
+        		<ResturantDots pos={miPos} name={mi_apa} givenClass={"mi-apa"} bubble = "10|$7" restaurantTrigger={props.restaurantTrigger} altText={"Mi Apa"}/>
+        		<ResturantDots pos={polloPos} name={pollo} givenClass={"pollo"} bubble = "15|$10" restaurantTrigger={props.restaurantTrigger} altText={"Pollo Tropical"}/>
     	</div>
 		)
 }
