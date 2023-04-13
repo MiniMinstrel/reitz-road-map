@@ -28,6 +28,7 @@ const Content = (props) => {
 	let key = props.entryKey;
 
 	const [restaurantName, setRestaurantName] = useState("");
+	const [results, setResults] = useState();
 
 	const restaurantTrigger = (restaurant) => {
 		setRestaurantName(restaurant);
@@ -38,13 +39,23 @@ const Content = (props) => {
 	const searchTrigger = (event) => {
 		console.log(event)
 		const query = event.toLowerCase();
+		let flag = false;
+		let skip = false;
 		const restaurants = ['Mi Apa', 'Panda Express', 'Pollo Tropical', 'Starbucks'];
 		restaurants.forEach((value) => {
-			if (value.toLowerCase().includes(query)) {
+			if (value.toLowerCase().includes(query) && query.length >= 3) {
 				setRestaurantName(value);
+				props.changeKey(3);
+				setResults();
+				skip = true;
+				flag = false;
+			} else if (!skip) {
+				flag = true;
 			}
 		});
-		props.changeKey(3);
+		if (flag) {
+			setResults(<p class="text-center py-1 text-red-600">No restaurant found! Search again!</p>);
+		}		
 	}
 
 	const searchRestaurantTrigger = (restaurantName) => {
@@ -71,8 +82,7 @@ const Content = (props) => {
 
 			page = <div>
 				{/* Repeat Element for as many resturants needed. */}
-				<div class= "design-b-list">
-					<p>This is the list!</p>
+				<div class= "py-16">
 						<div class= "list-panda">
 							<ListElement restaurantTrigger={restaurantTrigger} name="Panda Express"  icon = <img src={panda} alt="Panda Express" /> waitTime="15 min" avgPrice="$10" menu="https://www.tapingo.com/order/restaurant/panda-express-reitz-union-uf/" logo="" />
 						</div>
@@ -95,6 +105,7 @@ const Content = (props) => {
 
 			page = <div class="pt-14">
 				<Search searchTrigger={searchTrigger}/>
+				{results}
 			</div>
 		}
 		else if (display == 2) {

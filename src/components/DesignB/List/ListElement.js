@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 const ListElement = (props) => {
 
 	return(
-		<div className = "list">
+		<div onClick={() => {props.restaurantTrigger(props.name)}} className = "list">
 			<div className = "icon-image">
-				<div onClick={props.restaurantTrigger}>
+				<div>
 					{props.icon}
 				</div>
 			</div>
