@@ -25,7 +25,7 @@ const ResturantDots = (props) => {
 	return(
 		<div className ="pin">
 			<div onClick={() => props.restaurantTrigger(props.altText)} onTouchEnd={() => props.restaurantTrigger(props.altText)}>
-				<Draggable defaultPosition={props.start} position={props.pos} allowAnyClick={true} >
+				<Draggable onStart={() => false} defaultPosition={props.start} position={props.pos} allowAnyClick={true} >
 					<div className={`class ${props.givenClass}`} >
 						<p> {props.bubble} </p> 
 						<img src={props.name} alt={props.altText} />
